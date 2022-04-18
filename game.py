@@ -13,8 +13,8 @@ class Game():
     def __init__(self):
         pygame.init()  # initialize pygame library and set screen mode
         self.screen = pygame.display.set_mode(
-            size=SCREEN_SIZE,
-            #flags=pygame.FULLSCREEN,
+            #size=SCREEN_SIZE,
+            flags=pygame.FULLSCREEN,
             depth=COLOR_DEPTH)  # initialize the display
         self.screen_rect = self.screen.get_rect()
         pygame.display.set_caption("Vegan Bunny POS")  # set window caption
