@@ -5,7 +5,7 @@ from panel import Panel
 from pay_button import PayButton
 from utils import *
 
-SPACE = 10
+SPACE = 7
 
 
 class CartPanel(Panel):
@@ -54,7 +54,7 @@ class CartPanel(Panel):
                 self.galaxy, pay_button_text, CENTER, None)
             self.pay_button.rect = pygame.Rect(
                 self.last_cart_item().rect)
-            self.pay_button.rect.bottom = self.rect.bottom - SPACE
+            self.pay_button.rect.bottom = self.rect.bottom - 4*SPACE
             self.pay_button.rect.height *= 1.3
             self.galaxy.add_entity(self.pay_button)
 

@@ -3,7 +3,7 @@ from discount_button import DiscountButton
 from entity import Entity
 from utils import *
 
-SPACE = 10
+SPACE = 7
 
 
 class Panel(Entity):

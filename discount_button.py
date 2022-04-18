@@ -9,7 +9,7 @@ class DiscountButton(TextButton):
             galaxy=galaxy,
             text=text,
             text_alignment=text_alignment,
-            text_size=21,
+            text_size=17,
             rect=pygame.Rect(0, 0, 0, 0),
             border_width=1,
             border_radius=3,

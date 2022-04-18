@@ -9,7 +9,7 @@ class PayButton(TextButton):
             galaxy=galaxy,
             text=text,
             text_alignment=text_alignment,
-            text_size=25,
+            text_size=23,
             rect=pygame.Rect(0, 0, 0, 0),
             border_width=0,
             border_radius=3,

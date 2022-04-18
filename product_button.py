@@ -3,7 +3,7 @@ from text_button import TextButton
 from utils import *
 
 BUTTON_WIDTH = 120
-BUTTON_HEIGHT = BUTTON_WIDTH * 0.4
+BUTTON_HEIGHT = BUTTON_WIDTH * 0.35
 
 
 class ProductButton(TextButton):
@@ -12,7 +12,7 @@ class ProductButton(TextButton):
             galaxy=galaxy,
             text=text,
             text_alignment=CENTER,
-            text_size=21,
+            text_size=19,
             rect=pygame.Rect(0, 0, BUTTON_WIDTH, BUTTON_HEIGHT),
             border_width=1,
             border_radius=3,

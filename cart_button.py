@@ -4,7 +4,7 @@ import pygame.gfxdraw
 from text_button2 import TextButton2
 from utils import *
 
-BUTTON_WIDTH = 290
+BUTTON_WIDTH = 250
 BUTTON_HEIGHT = BUTTON_WIDTH * 0.19
 
 
@@ -14,7 +14,7 @@ class CartButton(TextButton2):
             galaxy=galaxy,
             text1='',
             text2='',
-            text_size=21,
+            text_size=17,
             rect=pygame.Rect(0, 0, BUTTON_WIDTH, BUTTON_HEIGHT),
             border_width=1,
             border_radius=3,

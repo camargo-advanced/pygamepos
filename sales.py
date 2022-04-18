@@ -32,45 +32,45 @@ class Sales():
         self.galaxy.add_entity(ImageButton(self.galaxy,
                                            text='Ovo',
                                            image_name='egg.png',
-                                           rect=pygame.Rect(21, 150, 65, 65),
+                                           rect=pygame.Rect(10, 30, 65, 65),
                                            action=self.category_pressed_event))
 
         self.galaxy.add_entity(ImageButton(self.galaxy,
                                            text='Barra',
                                            image_name='bar.png',
-                                           rect=pygame.Rect(21, 230, 65, 65),
+                                           rect=pygame.Rect(10, 110, 65, 65),
                                            action=self.category_pressed_event))
 
         self.galaxy.add_entity(ImageButton(self.galaxy,
                                            text='Bombom',
                                            image_name='candy.png',
-                                           rect=pygame.Rect(21, 310, 65, 65),
+                                           rect=pygame.Rect(10, 195, 65, 65),
                                            action=self.category_pressed_event))
 
         # products panel
         self.products_panel = Panel(self.galaxy,
-                                    rect=pygame.Rect(121, 30, 500, 700),
+                                    rect=pygame.Rect(100, 15, 390, 460),
                                     border_width=-1,
                                     border_radius=3)
         self.galaxy.add_entity(self.products_panel)
 
         # first line separator
         self.galaxy.add_entity(Line(self.galaxy,
-                                    start_pos=[99, 30],
-                                    end_pos=[99, 740],
+                                    start_pos=[80, 20],
+                                    end_pos=[80, 460],
                                     width=2))
 
         self.build_products_panel()
 
         # second line separator
         self.galaxy.add_entity(Line(self.galaxy,
-                                    start_pos=[650, 30],
-                                    end_pos=[650, 740],
+                                    start_pos=[495, 20],
+                                    end_pos=[495, 460],
                                     width=2))
 
         # cart panel
         self.cart_panel = CartPanel(self.galaxy,
-                                rect=pygame.Rect(680, 30, 360, 690),
+                                rect=pygame.Rect(520, 15, 260, 460),
                                 border_width=-1,
                                 border_radius=3)
         self.galaxy.add_entity(self.cart_panel)
@@ -83,7 +83,7 @@ class Sales():
         cart_label = Label(self.galaxy,
                                text='Carrinho: #' + now_str,
                                text_alignment=LEFT,
-                               rect=pygame.Rect(0, 0, 300, 35))
+                               rect=pygame.Rect(0, 0, 250, 25))
         self.cart_panel.add_entity(cart_label)
         self.galaxy.add_entity(cart_label)
 
@@ -98,7 +98,7 @@ class Sales():
         products_label = Label(self.galaxy,
                                text='Selecione o produto: ' + self.selected_category_name.upper(),
                                text_alignment=LEFT,
-                               rect=pygame.Rect(0, 0, 370, 35))
+                               rect=pygame.Rect(0, 0, 370, 25))
         self.products_panel.add_entity(products_label)
         self.galaxy.add_entity(products_label)
 
@@ -116,7 +116,7 @@ class Sales():
             separator = Label(self.galaxy,
                               text='',
                               text_alignment=LEFT,
-                              rect=pygame.Rect(0, 0, 370, 21))
+                              rect=pygame.Rect(0, 0, 370, 5))
             self.products_panel.add_entity(separator)
             self.galaxy.add_entity(separator)
 
@@ -124,7 +124,7 @@ class Sales():
             weights_label = Label(self.galaxy,
                                   text='Selecione o peso:',
                                   text_alignment=LEFT,
-                                  rect=pygame.Rect(0, 0, 370, 35))
+                                  rect=pygame.Rect(0, 0, 370, 25))
             self.products_panel.add_entity(weights_label)
             self.galaxy.add_entity(weights_label)
 
@@ -141,8 +141,7 @@ class Sales():
             separator = Label(self.galaxy,
                               text='',
                               text_alignment=LEFT,
-                              rect=pygame.Rect(0, 0, 370, 21))
-
+                              rect=pygame.Rect(0, 0, 370, 5))
             self.products_panel.add_entity(separator)
             self.galaxy.add_entity(separator)
 
@@ -150,7 +149,7 @@ class Sales():
             inclusions_label = Label(self.galaxy,
                                      text='Selecione a inclusão (opcional):',
                                      text_alignment=LEFT,
-                                     rect=pygame.Rect(0, 0, 370, 35))
+                                     rect=pygame.Rect(0, 0, 370, 25))
             self.products_panel.add_entity(inclusions_label)
             self.galaxy.add_entity(inclusions_label)
 
