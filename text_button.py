@@ -32,10 +32,10 @@ class TextButton(Entity):
 
         if self.double_border:
             rect2 = pygame.Rect(self.rect)
-            rect2.x += 5
-            rect2.y += 5
-            rect2.width -= 10
-            rect2.height -= 10
+            rect2.x += 4
+            rect2.y += 4
+            rect2.width -= 8
+            rect2.height -= 8
             pygame.draw.rect(
                 surface=surface,
                 color=GREEN,

@@ -13,38 +13,51 @@ class Products():
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
             )),
             Product('70%', 'Barra', (
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
             )),
             Product('55%', 'Barra', (
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.5},
-                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.5},
-                {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.},
+            )),
+            Product('50%', 'Barra', (
+                {'name': 'peso', 'value': '18g', 'price': 6.},
+                {'name': 'peso', 'value': '50g', 'price': 15.},
+                {'name': 'peso', 'value': '80g', 'price': 22.},
+                {'name': 'peso', 'value': '100g', 'price': 27.},
+                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
             Product('Branco', 'Barra', (
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.5},
-                {'name': 'inclusão', 'value': 'Damasco', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
             Product('Cupulate', 'Barra', (
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
             )),
 
             ##### OVOS #####
@@ -86,6 +99,20 @@ class Products():
                 {'name': 'peso', 'value': '10g', 'price': 5.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
                 {'name': 'inclusão', 'value': 'Berries', 'price': 0.5},
+            )),
+
+            ##### CREME DE AVELÃ #####
+
+            Product('Nuvega', 'Avelã', (
+                {'name': 'peso', 'value': '120g', 'price': 26.},
+                {'name': 'peso', 'value': '40g', 'price': 12.},
+            )),
+
+            ##### PASTA DE AMENDOIM #####
+
+            Product('Bunnoim', 'Amendoim', (
+                {'name': 'peso', 'value': '120g', 'price': 26.},
+                {'name': 'peso', 'value': '40g', 'price': 12.},
             )),
         ]
 

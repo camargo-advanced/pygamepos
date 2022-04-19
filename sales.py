@@ -30,21 +30,33 @@ class Sales():
 
         # add category options
         self.galaxy.add_entity(ImageButton(self.galaxy,
-                                           text='Ovo',
-                                           image_name='egg.png',
-                                           rect=pygame.Rect(10, 30, 65, 65),
+                                           text='Barra',
+                                           image_name='bar.png',
+                                           rect=pygame.Rect(10, 30, 60, 60),
                                            action=self.category_pressed_event))
 
         self.galaxy.add_entity(ImageButton(self.galaxy,
-                                           text='Barra',
-                                           image_name='bar.png',
-                                           rect=pygame.Rect(10, 110, 65, 65),
+                                           text='Avelã',
+                                           image_name='jar.png',
+                                           rect=pygame.Rect(10, 100, 60, 60),
                                            action=self.category_pressed_event))
 
         self.galaxy.add_entity(ImageButton(self.galaxy,
                                            text='Bombom',
                                            image_name='candy.png',
-                                           rect=pygame.Rect(10, 195, 65, 65),
+                                           rect=pygame.Rect(10, 170, 60, 60),
+                                           action=self.category_pressed_event))
+
+        self.galaxy.add_entity(ImageButton(self.galaxy,
+                                           text='Amendoim',
+                                           image_name='jar.png',
+                                           rect=pygame.Rect(10, 240, 60, 60),
+                                           action=self.category_pressed_event))
+
+        self.galaxy.add_entity(ImageButton(self.galaxy,
+                                           text='Ovo',
+                                           image_name='egg.png',
+                                           rect=pygame.Rect(10, 310, 60, 60),
                                            action=self.category_pressed_event))
 
         # products panel

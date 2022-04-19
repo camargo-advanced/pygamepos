@@ -1,21 +1,26 @@
 import pygame
+import sys
 from pygame.locals import *
 from galaxy import Galaxy
 from utils import *
 from sales import Sales
-
+print(sys.platform)
 COLOR_DEPTH = 8
 FPS = 30
-#SCREEN_SIZE = (1024, 768) # 4:3 aspect ratio
 SCREEN_SIZE = (800, 480) # 5:3 aspect ratio for raspberrypi screen 7"
+RASPBERRYPI_PLATFORM = 'linux'
 
 class Game():
     def __init__(self):
         pygame.init()  # initialize pygame library and set screen mode
-        self.screen = pygame.display.set_mode(
-            #size=SCREEN_SIZE,
-            flags=pygame.FULLSCREEN,
-            depth=COLOR_DEPTH)  # initialize the display
+        if sys.platform == RASPBERRYPI_PLATFORM:
+            self.screen = pygame.display.set_mode(
+                flags=pygame.FULLSCREEN,
+                depth=COLOR_DEPTH)  # initialize the display
+        else:
+            self.screen = pygame.display.set_mode(
+                size=SCREEN_SIZE,
+                depth=COLOR_DEPTH)  # initialize the display
         self.screen_rect = self.screen.get_rect()
         pygame.display.set_caption("Vegan Bunny POS")  # set window caption
         #pygame.mouse.set_visible(False)
