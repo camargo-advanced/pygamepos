@@ -2,7 +2,7 @@ from product import Product
 from ordered_set import OrderedSet
 
 
-class Products():
+class Inventory():
     def __init__(self):
         self.product_list = [
 
@@ -156,15 +156,15 @@ class Products():
 
 if __name__ == "__main__":
     # exemplos
-    products = Products()
-    print(products.category_name_set())
-    print(products.product_name_set('Ovo'))
-    print(products.variant_name_set('Ovo', 'Branco'))
-    print(products.variant_value_set('Ovo', 'Branco', 'peso'))
-    print(products.variant_value_set('Ovo', 'Branco', 'inclusão'))
-    print(products.product_name_set('Barra'))
-    print(products.variant_name_set('Barra', 'Branco'))
-    print(products.variant_value_set('Barra', 'Branco', 'peso'))
-    print(products.variant_value_set('Barra', 'Branco', 'inclusão'))
-    print(products.variant('Barra', 'Branco', 'peso', '50g'))
+    inventory = Inventory()
+    print(inventory.category_name_set())
+    print(inventory.product_name_set('Ovo'))
+    print(inventory.variant_name_set('Ovo', 'Branco'))
+    print(inventory.variant_value_set('Ovo', 'Branco', 'peso'))
+    print(inventory.variant_value_set('Ovo', 'Branco', 'inclusão'))
+    print(inventory.product_name_set('Barra'))
+    print(inventory.variant_name_set('Barra', 'Branco'))
+    print(inventory.variant_value_set('Barra', 'Branco', 'peso'))
+    print(inventory.variant_value_set('Barra', 'Branco', 'inclusão'))
+    print(inventory.variant('Barra', 'Branco', 'peso', '50g'))
         

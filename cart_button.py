@@ -48,7 +48,7 @@ class CartButton(TextButton2):
         self.text1 = '{category_name} {product}'.format(
             category_name=self.category_name,
             product=self.product_name)
-        self.text2 = '{weight} {inclusion} R${price:,.2f}'.format(
+        self.text2 = '{weight}{inclusion} R${price:,.2f}'.format(
             weight=self.weight_variant_value,
             inclusion=self.inclusion_variant_value,
             price=(self.weight_variant_price+self.inclusion_variant_price)*self.quantity)
@@ -73,16 +73,6 @@ class CartButton(TextButton2):
         self.qtd_font_surface_rect.center = [int(self.rect.x+self.rect.width),
                                              int(self.rect.y+self.rect.height/2)]
         surface.blit(self.qtd_font_surface, self.qtd_font_surface_rect)
-
-
-    def product_category_prefix(self):
-        if self.category_name == 'Ovo':
-            prefix = 'O'
-        elif self.category_name == 'Barra':
-            prefix = 'B'
-        elif self.category_name == 'Bombom':
-            prefix = 'BB'
-        return prefix 
 
     def increment(self):
         self.quantity += 1

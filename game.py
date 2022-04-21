@@ -17,13 +17,13 @@ class Game():
             self.screen = pygame.display.set_mode(
                 flags=pygame.FULLSCREEN,
                 depth=COLOR_DEPTH)  # initialize the display
+            pygame.mouse.set_visible(False)
         else:
             self.screen = pygame.display.set_mode(
                 size=SCREEN_SIZE,
                 depth=COLOR_DEPTH)  # initialize the display
         self.screen_rect = self.screen.get_rect()
         pygame.display.set_caption("Vegan Bunny POS")  # set window caption
-        #pygame.mouse.set_visible(False)
         self.clock = pygame.time.Clock()  # the time starts
 
     def new_game(self):
