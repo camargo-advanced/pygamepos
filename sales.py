@@ -6,7 +6,7 @@ from product_button import ProductButton
 from image_button import ImageButton
 from panel import Panel
 from line import Line
-from products import Products
+from inventory import Inventory
 from datetime import datetime
 from utils import *
 
@@ -16,7 +16,7 @@ class Sales():
         self.galaxy = galaxy
         self.selected_category_name = 'Barra'
         self.selected_product_name = None
-        self.products = Products()
+        self.inventory = Inventory()
         self.build()
 
     def build(self):
@@ -30,21 +30,33 @@ class Sales():
 
         # add category options
         self.galaxy.add_entity(ImageButton(self.galaxy,
-                                           text='Ovo',
-                                           image_name='egg.png',
-                                           rect=pygame.Rect(10, 30, 65, 65),
+                                           text='Barra',
+                                           image_name='bar.png',
+                                           rect=pygame.Rect(10, 30, 60, 60),
                                            action=self.category_pressed_event))
 
         self.galaxy.add_entity(ImageButton(self.galaxy,
-                                           text='Barra',
-                                           image_name='bar.png',
-                                           rect=pygame.Rect(10, 110, 65, 65),
+                                           text='Avelã',
+                                           image_name='jar.png',
+                                           rect=pygame.Rect(10, 100, 60, 60),
                                            action=self.category_pressed_event))
 
         self.galaxy.add_entity(ImageButton(self.galaxy,
                                            text='Bombom',
                                            image_name='candy.png',
-                                           rect=pygame.Rect(10, 195, 65, 65),
+                                           rect=pygame.Rect(10, 170, 60, 60),
+                                           action=self.category_pressed_event))
+
+        self.galaxy.add_entity(ImageButton(self.galaxy,
+                                           text='Amendoim',
+                                           image_name='jar.png',
+                                           rect=pygame.Rect(10, 240, 60, 60),
+                                           action=self.category_pressed_event))
+
+        self.galaxy.add_entity(ImageButton(self.galaxy,
+                                           text='Ovo',
+                                           image_name='egg.png',
+                                           rect=pygame.Rect(10, 310, 60, 60),
                                            action=self.category_pressed_event))
 
         # products panel
@@ -75,24 +87,6 @@ class Sales():
                                 border_radius=3)
         self.galaxy.add_entity(self.cart_panel)
 
-        self.build_cart_panel()
-
-    def build_cart_panel(self):
-        # add cart panel label
-        now_str = datetime.now().strftime("%d%m%y-%H%M%S")
-        cart_label = Label(self.galaxy,
-                               text='Carrinho: #' + now_str,
-                               text_alignment=LEFT,
-                               rect=pygame.Rect(0, 0, 250, 25))
-        self.cart_panel.add_entity(cart_label)
-        self.galaxy.add_entity(cart_label)
-
-    def rebuild_cart_panel(self):
-        for entity in self.cart_panel.entities:
-            entity.kill()
-        self.cart_panel.clear()
-        self.build_cart_panel()
-
     def build_products_panel(self):
         # add products label
         products_label = Label(self.galaxy,
@@ -103,7 +97,7 @@ class Sales():
         self.galaxy.add_entity(products_label)
 
         # add product options
-        for variant_value in self.products.product_name_set(self.selected_category_name):
+        for variant_value in self.inventory.product_name_set(self.selected_category_name):
             button = ProductButton(
                 galaxy=self.galaxy,
                 text=variant_value,
@@ -129,7 +123,7 @@ class Sales():
             self.galaxy.add_entity(weights_label)
 
             # add weight options
-            for variant_value in self.products.variant_value_set(self.selected_category_name, self.selected_product_name, 'peso'):
+            for variant_value in self.inventory.variant_value_set(self.selected_category_name, self.selected_product_name, 'peso'):
                 button = ProductButton(
                     galaxy=self.galaxy,
                     text=variant_value,
@@ -154,7 +148,7 @@ class Sales():
             self.galaxy.add_entity(inclusions_label)
 
             # add inclusion options
-            for variant_value in self.products.variant_value_set(
+            for variant_value in self.inventory.variant_value_set(
                     self.selected_category_name, self.selected_product_name, 'inclusão'):
                 button = ProductButton(
                     galaxy=self.galaxy,
@@ -184,6 +178,7 @@ class Sales():
                 last_cart_item.weight_variant_value == '':
             self.cart_panel.remove_entity(last_cart_item)  # remove from cart
             last_cart_item.kill()  # remove from galaxy
+        self.cart_panel.rebuild()
 
         # If last item already in the cart is the same,
         # increment item count on cart
@@ -208,9 +203,10 @@ class Sales():
     def weight_pressed_event(self, button):
         cart_item = self.cart_panel.last_cart_item()
         if cart_item:
-            variant = self.products.variant(
+            variant = self.inventory.variant(
                 self.selected_category_name, self.selected_product_name, 'peso', button.text)
             cart_item.update_weight_variant(variant['value'], variant['price'])
+            self.cart_panel.rebuild()
 
     def inclusion_pressed_event(self, button):
         cart_item = self.cart_panel.last_cart_item()
@@ -218,20 +214,24 @@ class Sales():
             if cart_item.inclusion_variant_value != '' and cart_item.inclusion_variant_value == button.text:
                 cart_item.update_inclusion_variant('', 0.)
             else:
-                variant = self.products.variant(
+                variant = self.inventory.variant(
                     self.selected_category_name, self.selected_product_name, 'inclusão', button.text)
                 cart_item.update_inclusion_variant(
                     variant['value'], variant['price'])
+            self.cart_panel.rebuild()
 
     def increment_cart_item(self, button):
         button.increment()
+        self.cart_panel.rebuild()
 
     def decrement_cart_item(self, button):
         if button.quantity > 1:
             button.decrement()
         else:
             self.remove_from_cart(button)
+        self.cart_panel.rebuild()
 
     def remove_from_cart(self, button):
         self.cart_panel.remove_entity(button)  # remove from cart
         button.kill()  # remove from galaxy
+        self.cart_panel.rebuild()
