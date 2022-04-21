@@ -135,7 +135,7 @@ class CartPanel(Panel):
         amount_to_pay_text = 'R${amount_to_pay:,.2f}'.format(
                 amount_to_pay=amount_to_pay)
         row += amount_to_pay_text + '\n'
-        filename = datetime.now().strftime("%d%m%y") + '.csv'
+        filename = '../' + datetime.now().strftime("%d%m%y") + '.csv'
         with open(filename, 'a') as f:
             f.write(row)
         self.reset()
