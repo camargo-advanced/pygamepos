@@ -36,7 +36,6 @@ class CartPanel(Panel):
         super().render(surface)
 
     def reset(self):
-        self.cart_number = datetime.now().strftime("%d%m%y-%H%M%S")
         self.discount_percentage = 0
         self.payment_method_index = 0
         for item in self.entities:
@@ -45,7 +44,7 @@ class CartPanel(Panel):
 
         # add cart panel label
         cart_label = Label(self.galaxy,
-                               text='Carrinho: #' + self.cart_number,
+                               text='Carrinho de compras:',
                                text_alignment=LEFT,
                                rect=pygame.Rect(0, 0, 250, 25))
         self.add_entity(cart_label)
@@ -122,6 +121,7 @@ class CartPanel(Panel):
             self.discount_percentage += 5
 
     def pay_pressed_event(self, button):
+        self.cart_number = datetime.now().strftime("%d%m%y-%H%M%S")
         row = ''
         for entity in self.cart_items_list():
             row += self.cart_number + ', '
