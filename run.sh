@@ -1,5 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 cd /home/marcelo/pygamepos
-source .venv/bin/activate 
-python game.py
+source /home/marcelo/pygamepos/.venv/bin/activate 
+python /home/marcelo/pygamepos/game.py
 

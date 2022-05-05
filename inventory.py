@@ -21,6 +21,7 @@ class Inventory():
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
                 {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Café', 'price': 0.},
             )),
             Product('55%', 'Barra', (
                 {'name': 'peso', 'value': '18g', 'price': 6.},
