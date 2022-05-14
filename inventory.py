@@ -24,6 +24,7 @@ class Inventory():
                 {'name': 'inclusão', 'value': 'Café', 'price': 0.},
             )),
             Product('55%', 'Barra', (
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
@@ -37,6 +38,7 @@ class Inventory():
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
+                {'name': 'inclusão', 'value': 'Hibisco', 'price': 0.},
                 {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
                 {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
                 {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.},
@@ -44,6 +46,7 @@ class Inventory():
                 {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
             Product('Branco', 'Barra', (
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
@@ -74,7 +77,7 @@ class Inventory():
             Product('Branco', 'Ovo', (
                 {'name': 'peso', 'value': '100g', 'price': 30.},
                 {'name': 'peso', 'value': '250g', 'price': 75.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
 
             ##### BOMBONS #####
@@ -93,13 +96,14 @@ class Inventory():
                 {'name': 'peso', 'value': '8g', 'price': 3.},
                 {'name': 'peso', 'value': '10g', 'price': 5.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Hibisco', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
             Product('Cupulate', 'Bombom', (
                 {'name': 'peso', 'value': '8g', 'price': 3.},
                 {'name': 'peso', 'value': '10g', 'price': 5.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.5},
+                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
 
             ##### CREME DE AVELÃ #####
