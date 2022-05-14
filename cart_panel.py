@@ -127,12 +127,13 @@ class CartPanel(Panel):
             row += self.cart_number + ', '
             row += str(entity.quantity) + ', '
             row += entity.text1 + ' ' + entity.text2 + '\n'
+            
         row += self.cart_number + ', '
         row += self.payment_method_button.text + ', '
         row += self.discount_button.text + ', '
         amount_to_pay = self.total_price() - self.total_price() * \
                 self.discount_percentage/100
-        amount_to_pay_text = 'R${amount_to_pay:,.2f}'.format(
+        amount_to_pay_text = '{amount_to_pay:,.2f}'.format(
                 amount_to_pay=amount_to_pay)
         row += amount_to_pay_text + '\n'
         filename = '../' + datetime.now().strftime("%d%m%y") + '.csv'
