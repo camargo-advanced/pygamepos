@@ -86,6 +86,8 @@ class Inventory():
                 {'name': 'peso', 'value': '8g', 'price': 3.},
                 {'name': 'peso', 'value': '10g', 'price': 3.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
+                {'name': 'inclusão', 'value': 'Amêndoas', 'price': 0.},
+
             )),
             Product('55%', 'Bombom', (
                 {'name': 'peso', 'value': '8g', 'price': 3.},
