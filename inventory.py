@@ -84,24 +84,24 @@ class Inventory():
 
             Product('70%', 'Bombom', (
                 {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 5.},
+                {'name': 'peso', 'value': '10g', 'price': 3.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
             )),
             Product('55%', 'Bombom', (
                 {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 5.},
+                {'name': 'peso', 'value': '10g', 'price': 3.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
             )),
             Product('Branco', 'Bombom', (
                 {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 5.},
+                {'name': 'peso', 'value': '10g', 'price': 3.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
                 {'name': 'inclusão', 'value': 'Hibisco', 'price': 0.},
                 {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
             Product('Cupulate', 'Bombom', (
                 {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 5.},
+                {'name': 'peso', 'value': '10g', 'price': 3.},
                 {'name': 'peso', 'value': '12g', 'price': 7.},
                 {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
