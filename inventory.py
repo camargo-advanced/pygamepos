@@ -8,20 +8,29 @@ class Inventory():
 
             ###### BARRAS #####
 
+            Product('100%', 'Barra', (
+                {'name': 'peso', 'value': '15g', 'price': 5.},
+                {'name': 'peso', 'value': '18g', 'price': 6.},
+                {'name': 'peso', 'value': '50g', 'price': 15.},
+                {'name': 'peso', 'value': '80g', 'price': 22.},
+                {'name': 'peso', 'value': '100g', 'price': 27.},
+            )),
             Product('80%', 'Barra', (
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '18g', 'price': 6.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
                 {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Nibs', 'price': 0.},
             )),
             Product('70%', 'Barra', (
-                {'name': 'peso', 'value': '18g', 'price': 6.},
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
                 {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Café', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Café', 'price': 0.},
             )),
             Product('55%', 'Barra', (
                 {'name': 'peso', 'value': '15g', 'price': 5.},
@@ -29,22 +38,27 @@ class Inventory():
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
                 {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.},
             )),
-            Product('50%', 'Barra', (
-                {'name': 'peso', 'value': '18g', 'price': 6.},
+            Product('52%', 'Barra', (
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
-                {'name': 'peso', 'value': '80g', 'price': 22.},
-                {'name': 'peso', 'value': '100g', 'price': 27.},
-                {'name': 'inclusão', 'value': 'Hibisco', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
+            # Product('50%', 'Barra', (
+            #     {'name': 'peso', 'value': '15g', 'price': 5.},
+            #     {'name': 'peso', 'value': '18g', 'price': 6.},
+            #     {'name': 'peso', 'value': '50g', 'price': 15.},
+            #     {'name': 'peso', 'value': '80g', 'price': 22.},
+            #     {'name': 'peso', 'value': '100g', 'price': 27.},
+            #     {'name': 'inclusão', 'value': 'Hibisco', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Nuts', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Pistache', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Amendoim', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
+            # )),
             Product('Branco', 'Barra', (
                 {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '18g', 'price': 6.},
@@ -56,71 +70,72 @@ class Inventory():
                 {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
             Product('Cupulate', 'Barra', (
-                {'name': 'peso', 'value': '18g', 'price': 6.},
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'peso', 'value': '50g', 'price': 15.},
                 {'name': 'peso', 'value': '80g', 'price': 22.},
                 {'name': 'peso', 'value': '100g', 'price': 27.},
                 {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
+                {'name': 'inclusão', 'value': 'Nibs', 'price': 0.},
+            #     {'name': 'inclusão', 'value': 'Damasco', 'price': 0.},
             )),
 
-            ##### OVOS #####
+            # ##### OVOS #####
 
-            Product('70%', 'Ovo', (
-                {'name': 'peso', 'value': '100g', 'price': 30.},
-                {'name': 'peso', 'value': '250g', 'price': 75.},
-            )),
-            Product('55%', 'Ovo', (
-                {'name': 'peso', 'value': '100g', 'price': 30.},
-                {'name': 'peso', 'value': '250g', 'price': 75.},
-            )),
-            Product('Branco', 'Ovo', (
-                {'name': 'peso', 'value': '100g', 'price': 30.},
-                {'name': 'peso', 'value': '250g', 'price': 75.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
-            )),
+            # Product('70%', 'Ovo', (
+            #     {'name': 'peso', 'value': '100g', 'price': 30.},
+            #     {'name': 'peso', 'value': '250g', 'price': 75.},
+            # )),
+            # Product('55%', 'Ovo', (
+            #     {'name': 'peso', 'value': '100g', 'price': 30.},
+            #     {'name': 'peso', 'value': '250g', 'price': 75.},
+            # )),
+            # Product('Branco', 'Ovo', (
+            #     {'name': 'peso', 'value': '100g', 'price': 30.},
+            #     {'name': 'peso', 'value': '250g', 'price': 75.},
+            #     {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
+            # )),
 
-            ##### BOMBONS #####
+            # ##### BOMBONS #####
 
-            Product('70%', 'Bombom', (
-                {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 3.},
-                {'name': 'peso', 'value': '12g', 'price': 7.},
-                {'name': 'inclusão', 'value': 'Amêndoas', 'price': 0.},
+            # Product('70%', 'Bombom', (
+            #     {'name': 'peso', 'value': '8g', 'price': 3.},
+            #     {'name': 'peso', 'value': '10g', 'price': 3.},
+            #     {'name': 'peso', 'value': '12g', 'price': 7.},
+            #     {'name': 'inclusão', 'value': 'Amêndoas', 'price': 0.},
 
-            )),
-            Product('55%', 'Bombom', (
-                {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 3.},
-                {'name': 'peso', 'value': '12g', 'price': 7.},
-            )),
+            # )),
+            # Product('55%', 'Bombom', (
+            #     {'name': 'peso', 'value': '8g', 'price': 3.},
+            #     {'name': 'peso', 'value': '10g', 'price': 3.},
+            #     {'name': 'peso', 'value': '12g', 'price': 7.},
+            # )),
             Product('Branco', 'Bombom', (
-                {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 3.},
-                {'name': 'peso', 'value': '12g', 'price': 7.},
+                # {'name': 'peso', 'value': '8g', 'price': 3.},
+                # {'name': 'peso', 'value': '10g', 'price': 3.},
+                {'name': 'peso', 'value': '15g', 'price': 5.},
                 {'name': 'inclusão', 'value': 'Hibisco', 'price': 0.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
+                # {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
             )),
-            Product('Cupulate', 'Bombom', (
-                {'name': 'peso', 'value': '8g', 'price': 3.},
-                {'name': 'peso', 'value': '10g', 'price': 3.},
-                {'name': 'peso', 'value': '12g', 'price': 7.},
-                {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
-            )),
+            # Product('Cupulate', 'Bombom', (
+            #     {'name': 'peso', 'value': '8g', 'price': 3.},
+            #     {'name': 'peso', 'value': '10g', 'price': 3.},
+            #     {'name': 'peso', 'value': '12g', 'price': 7.},
+            #     {'name': 'inclusão', 'value': 'Berries', 'price': 0.},
+            # )),
 
             ##### CREME DE AVELÃ #####
 
             Product('Nuvega', 'Avelã', (
-                {'name': 'peso', 'value': '120g', 'price': 26.},
+                {'name': 'peso', 'value': '120g', 'price': 27.},
                 {'name': 'peso', 'value': '40g', 'price': 12.},
             )),
 
-            ##### PASTA DE AMENDOIM #####
+            # ##### PASTA DE AMENDOIM #####
 
-            Product('Bunnoim', 'Amendoim', (
-                {'name': 'peso', 'value': '120g', 'price': 26.},
-                {'name': 'peso', 'value': '40g', 'price': 12.},
-            )),
+            # Product('Bunnoim', 'Amendoim', (
+            #     {'name': 'peso', 'value': '120g', 'price': 26.},
+            #     {'name': 'peso', 'value': '40g', 'price': 12.},
+            # )),
         ]
 
     def category_name_set(self):
