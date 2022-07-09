@@ -1,19 +1,19 @@
 import pygame
-import sys
+import platform
 from pygame.locals import *
 from galaxy import Galaxy
 from utils import *
 from sales import Sales
-print(sys.platform)
+
 COLOR_DEPTH = 8
 FPS = 30
-SCREEN_SIZE = (800, 480) # 5:3 aspect ratio for raspberrypi screen 7"
-RASPBERRYPI_PLATFORM = 'linux'
+SCREEN_SIZE = (800, 480)  # 5:3 aspect ratio for raspberrypi screen 7"
+
 
 class Game():
     def __init__(self):
         pygame.init()  # initialize pygame library and set screen mode
-        if sys.platform == RASPBERRYPI_PLATFORM:
+        if str(platform.uname()).find("raspberrypi") > -1:
             self.screen = pygame.display.set_mode(
                 flags=pygame.FULLSCREEN,
                 depth=COLOR_DEPTH)  # initialize the display
